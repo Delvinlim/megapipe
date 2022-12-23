@@ -1,0 +1,130 @@
+.form-kategori-asset-new {
+  width: 100%;
+  display: flex;
+
+  .form-kategori-asset-newContainer {
+    flex: 6;
+
+    .loader-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      
+      .loader {
+        width: 60px;
+        height: 60px;
+      }
+
+      .loader::before {
+        content: "";
+        box-sizing: border-box;
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border-top: 2px solid #8900FF;
+        border-right: 2px solid transparent;
+        animation: spinner8217 0.8s linear infinite;
+      }
+
+      @keyframes spinner8217 {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    }
+
+    .form-kategori-asset-bottom {
+      height: calc(100% - 200px);
+    }
+
+    .api-message-kategori-asset { 
+      max-width: calc(50% + 10px);
+      margin-bottom: 10px;
+    }
+
+    .form-kategori-asset-top,
+    .form-kategori-asset-bottom {
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+      padding: 10px;
+      margin: 20px;
+
+      h1 {
+        color: lightgray;
+        font-size: 20px;
+      }
+
+      .form-kategori-asset-right {
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 60px;
+
+          .form-input {
+            max-width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            label {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              font-size: 18px;
+
+              .icon {
+                cursor: pointer;
+              }
+            }
+
+            input {
+              width: 100%;
+              padding: 5px;
+              border: none;
+              border-bottom: 1px solid gray;
+              font-size: 16px;
+            }
+          }
+
+          .form-kategori-asset-button {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            // flex-direction: row-reverse;
+            max-width: calc(50% + 10px);
+
+            button {
+              width: 150px;
+              padding: 10px;
+              border: none;
+              background-color: teal;
+              color: white;
+              font-weight: bold;
+              cursor: pointer;
+              margin-top: 10px;
+              font-size: 16px;
+            }
+
+            .outline-button {
+              text-align: center;
+              text-decoration: none;
+              width: 150px;
+              padding: 10px;
+              border: none;
+              // background-color: teal;
+              border: 1px solid teal;
+              color: teal;
+              font-weight: bold;
+              cursor: pointer;
+              margin-top: 10px;
+              font-size: 16px;
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
